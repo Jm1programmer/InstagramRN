@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/AntDesign'
 import Icons from 'react-native-vector-icons/Fontisto'
 import Micons from 'react-native-vector-icons/MaterialIcons'
 export default function MenuFeed() {
-  
+   
 
   return <>
     
@@ -69,5 +69,7 @@ const styles = StyleSheet.create({
     },
     icon: {
         paddingHorizontal: 5,
-    }
+    },
+
+   
 });

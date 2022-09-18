@@ -1,5 +1,7 @@
 
-import { StyleSheet, Text, View,StatusBar,SafeAreaView,Dimensions,TouchableOpacity,Image,ScrollView } from 'react-native';
+import { StyleSheet, Text, View,StatusBar,SafeAreaView,Dimensions,
+    TouchableOpacity,Image,ScrollView } from 'react-native';
+  
 import ProfilePic from "../../../assets/FaceBookProfilePic.png"
 import PostImage from "../../../assets/WomanVacation.jpg"
 import Icon from 'react-native-vector-icons/AntDesign'
@@ -31,6 +33,7 @@ export default function PostFeed() {
             </View>
 
             <View style={styles.TopDownInfo}>
+                
                 <View style={styles.TopDownFunctional}>
                     <TouchableOpacity>
                 <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
@@ -42,20 +45,26 @@ export default function PostFeed() {
                 <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
                 </TouchableOpacity>
               
-
+                
                 <View style={styles.share}>
                 <TouchableOpacity>
                 <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+                  
                 </TouchableOpacity>
+                
                 </View>
-
-
-                </View>
+               
+                
+             </View>
+             <View style={styles.HourView}>
+             <Text  style={styles.Hour}>2 hour ago</Text>
+             </View>
             </View>
             
         </View>
 
 
+      
         <View style={styles.post}>
          
          <View style={styles.PostprofileInfo}>
@@ -76,6 +85,7 @@ export default function PostFeed() {
          </View>
 
          <View style={styles.TopDownInfo}>
+             
              <View style={styles.TopDownFunctional}>
                  <TouchableOpacity>
              <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
@@ -87,19 +97,23 @@ export default function PostFeed() {
              <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
              </TouchableOpacity>
            
-
+             
              <View style={styles.share}>
              <TouchableOpacity>
              <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+               
              </TouchableOpacity>
+             
              </View>
-
-
-             </View>
+            
+             
+          </View>
+          <View style={styles.HourView}>
+          <Text  style={styles.Hour}>2 hour ago  </Text>
+          </View>
          </View>
          
      </View>
-
 
      <View style={styles.post}>
          
@@ -121,6 +135,7 @@ export default function PostFeed() {
          </View>
 
          <View style={styles.TopDownInfo}>
+             
              <View style={styles.TopDownFunctional}>
                  <TouchableOpacity>
              <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
@@ -132,19 +147,23 @@ export default function PostFeed() {
              <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
              </TouchableOpacity>
            
-
+             
              <View style={styles.share}>
              <TouchableOpacity>
              <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+               
              </TouchableOpacity>
+             
              </View>
-
-
-             </View>
+            
+             
+          </View>
+          <View style={styles.HourView}>
+          <Text  style={styles.Hour}>2 hour ago  </Text>
+          </View>
          </View>
          
      </View>
-
 
      <View style={styles.post}>
          
@@ -166,6 +185,7 @@ export default function PostFeed() {
          </View>
 
          <View style={styles.TopDownInfo}>
+             
              <View style={styles.TopDownFunctional}>
                  <TouchableOpacity>
              <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
@@ -177,19 +197,23 @@ export default function PostFeed() {
              <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
              </TouchableOpacity>
            
-
+             
              <View style={styles.share}>
              <TouchableOpacity>
              <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+               
              </TouchableOpacity>
+             
              </View>
-
-
-             </View>
+            
+             
+          </View>
+          <View style={styles.HourView}>
+          <Text  style={styles.Hour}>2 hour ago  </Text>
+          </View>
          </View>
          
      </View>
-
 
      <View style={styles.post}>
          
@@ -211,6 +235,7 @@ export default function PostFeed() {
          </View>
 
          <View style={styles.TopDownInfo}>
+             
              <View style={styles.TopDownFunctional}>
                  <TouchableOpacity>
              <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
@@ -222,19 +247,23 @@ export default function PostFeed() {
              <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
              </TouchableOpacity>
            
-
+             
              <View style={styles.share}>
              <TouchableOpacity>
              <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+               
              </TouchableOpacity>
+             
              </View>
-
-
-             </View>
+            
+             
+          </View>
+          <View style={styles.HourView}>
+          <Text  style={styles.Hour}>2 hour ago  </Text>
+          </View>
          </View>
          
      </View>
-
 
      <View style={styles.post}>
          
@@ -256,6 +285,7 @@ export default function PostFeed() {
          </View>
 
          <View style={styles.TopDownInfo}>
+             
              <View style={styles.TopDownFunctional}>
                  <TouchableOpacity>
              <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
@@ -267,19 +297,23 @@ export default function PostFeed() {
              <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
              </TouchableOpacity>
            
-
+             
              <View style={styles.share}>
              <TouchableOpacity>
              <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+               
              </TouchableOpacity>
+             
              </View>
-
-
-             </View>
+            
+             
+          </View>
+          <View style={styles.HourView}>
+          <Text  style={styles.Hour}>2 hour ago  </Text>
+          </View>
          </View>
          
      </View>
-
 
      <View style={styles.post}>
          
@@ -301,6 +335,7 @@ export default function PostFeed() {
          </View>
 
          <View style={styles.TopDownInfo}>
+             
              <View style={styles.TopDownFunctional}>
                  <TouchableOpacity>
              <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
@@ -312,21 +347,23 @@ export default function PostFeed() {
              <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
              </TouchableOpacity>
            
-
+             
              <View style={styles.share}>
              <TouchableOpacity>
              <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+               
              </TouchableOpacity>
+             
              </View>
-
-                
-
-             </View>
-                
+            
+             
+          </View>
+          <View style={styles.HourView}>
+          <Text  style={styles.Hour}>2 hour ago  </Text>
+          </View>
          </View>
          
      </View>
-
 
      <View style={styles.post}>
          
@@ -348,6 +385,7 @@ export default function PostFeed() {
          </View>
 
          <View style={styles.TopDownInfo}>
+             
              <View style={styles.TopDownFunctional}>
                  <TouchableOpacity>
              <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
@@ -359,18 +397,74 @@ export default function PostFeed() {
              <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
              </TouchableOpacity>
            
-
+             
              <View style={styles.share}>
              <TouchableOpacity>
              <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+               
              </TouchableOpacity>
+             
              </View>
-
-
-             </View>
+            
+             
+          </View>
+          <View style={styles.HourView}>
+          <Text  style={styles.Hour}>2 hour ago  </Text>
+          </View>
          </View>
          
      </View>
+
+     <View style={styles.post}>
+         
+         <View style={styles.PostprofileInfo}>
+         <TouchableOpacity style={styles.ProfileTouchable}>
+             <View style={styles.ProfileInfo}>
+                 
+                 
+                 <View style={styles.profilePic}>
+                    <Image style={styles.profilePicImg} source={ProfilePic} />
+                 </View>
+                 <Text style={styles.profileName}>User.name</Text>
+                
+             </View>
+             </TouchableOpacity>
+         </View>
+         <View style={styles.postImage}>
+             <Image style={styles.postImageImg} source={PostImage} resizeMode="cover" />
+         </View>
+
+         <View style={styles.TopDownInfo}>
+             
+             <View style={styles.TopDownFunctional}>
+                 <TouchableOpacity>
+             <Icon  name="hearto" size={30} color="#000" style={styles.icon}/>
+             </TouchableOpacity>
+             <TouchableOpacity>
+             <Ficons  name="message-circle" size={30} color="#000" style={styles.icon}/>
+             </TouchableOpacity>
+             <TouchableOpacity>
+             <Ficons  name="send" size={30} color="#000" style={styles.icon}/>
+             </TouchableOpacity>
+           
+             
+             <View style={styles.share}>
+             <TouchableOpacity>
+             <Ficons  name="bookmark" size={30} color="#000" style={[styles.icon,styles.Share]}/>
+               
+             </TouchableOpacity>
+             
+             </View>
+            
+             
+          </View>
+          <View style={styles.HourView}>
+          <Text  style={styles.Hour}>2 hour ago  </Text>
+          </View>
+         </View>
+         
+     </View>
+    
 
         
     
@@ -382,6 +476,7 @@ const styles = StyleSheet.create({
 
     post: {
         marginVertical: 10,
+        
     },
     postImage: {
         width: '100%',
@@ -424,16 +519,22 @@ const styles = StyleSheet.create({
     },
 
     profileName: {
-        fontWeight: 'bold',
+       
         fontSize: 15,
         marginLeft: 10,
+        fontFamily: 'SegoeUIBold',
+    },
+
+    TopDownInfo: {
+        marginHorizontal: 12,
+        
     },
 
     TopDownFunctional: {
         width:"100%",
         flexDirection: "row",
        
-        marginHorizontal: 12,
+        
     },
     
     icon: {
@@ -445,8 +546,15 @@ const styles = StyleSheet.create({
         marginHorizontal: '40%'
     },
 
-    descText: {
-        color: 'black'
+    HourView: {
+        marginHorizontal: 10,
+        marginVertical: 5,
+      
+    },
+    Hour: {
+        fontSize: 15,
+        fontFamily: 'SegoeUI',
     }
+    
     
 });

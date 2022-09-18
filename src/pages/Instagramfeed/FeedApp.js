@@ -1,9 +1,19 @@
 
-import { StyleSheet, Text, View,StatusBar,SafeAreaView, ScrollView, FlatList } from 'react-native';
+import { StyleSheet, Text, View,StatusBar,SafeAreaView, ScrollView, FlatList,Dimensions } from 'react-native';
+import { useFonts } from 'expo-font';
 import MenuFeed from "./MenuFeed"
 import StoriesFeed from "./StoriesFeed"
 import PostFeed from "./FeedPost"
 export default function FeedInsta() {
+
+  const [fontsLoaded] = useFonts({
+    'SegoeUI': require('./../../../assets/fonts/SegoeUI.ttf'),
+    'SegoeUIBold': require('./../../../assets/fonts/SegoeUIBold.ttf'),
+  });
+
+ if (!fontsLoaded) {
+  return null
+ }
     
     StatusBar.setBarStyle('dark', true);
   return (
@@ -16,15 +26,18 @@ export default function FeedInsta() {
             <StoriesFeed />
         <PostFeed />
             </View>
-       <Text>OIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOIOOIOIOIOIOIOIOIOIOIOIOI</Text>
+            <View style={styles.whiteback}></View>
         </ScrollView>
     </View>
     </SafeAreaView>
   );
 }
-
+const height = Dimensions.get('screen').height
 const styles = StyleSheet.create({
     SafeArea: {
         flex: 1
+    },
+    whiteback: {
+      height: height /9
     }
 });

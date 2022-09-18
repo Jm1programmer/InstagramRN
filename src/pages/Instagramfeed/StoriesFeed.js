@@ -18,6 +18,7 @@ export default function StoriesFeed() {
 
         <View style={styles.Stories}>
             <View style={styles.Storie}>
+                
                 <Image style={styles.StorieImage} source={ProfilePic} />
             </View>
             <Text style={styles.StorieText}>User.name</Text>
@@ -103,12 +104,21 @@ const styles = StyleSheet.create({
       
     },
     Storie: {
+        width: 85,
+        height: 85,
+       
+        borderRadius: 40,
+        marginHorizontal:12 ,
+       alignItems: 'center',
+       justifyContent: 'center',
+    },
+
+    StorieGradient: {
         width: 75,
         height: 75,
         backgroundColor: "#808080",
         borderRadius: 40,
         marginHorizontal:12 ,
-       alignItems: 'center',
     },
 
     StorieImage: {
@@ -125,5 +135,6 @@ const styles = StyleSheet.create({
         color: '#000',
         fontSize: 13,
         textAlign: 'center',
+        fontFamily: 'SegoeUI',
     }
 });
