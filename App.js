@@ -1,17 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-
-
-import { StyleSheet, Text, View } from 'react-native';
-import { useFonts } from 'expo-font';
-
-import FeedInsta from './src/pages/Instagramfeed/FeedApp'
-
-
+import RoutesNavigation from './src/pages/routes'
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
  
   return (
-    <FeedInsta />
+    <NavigationContainer>
+        <RoutesNavigation />
+    </NavigationContainer>
+    
   );
 }
 
