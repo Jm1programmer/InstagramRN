@@ -26,6 +26,10 @@
 
 ## Updates
 
+20/09/2022 - Finished login screen, done the form validation and improve the front end
+ 
+ <img height="500em" src="https://media.discordapp.net/attachments/955093666807054386/1021894433622462584/20-09-2022_Instagram_React_Native.gif?width=273&height=579" />
+
  19/09/2022 - Starting the Login screen, most of the front end of the Login screen ready
  
  <img height="500em" src="https://media.discordapp.net/attachments/955093666807054386/1021572015687208981/Android_Emulator_-_Pixel_4_API_30_5554_2022-09-19_20-49-11_video-converter.com.gif?width=273&height=579" />
