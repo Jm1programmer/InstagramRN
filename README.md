@@ -25,10 +25,7 @@
 > Create Store Screen
 
 ## Updates
- 17/09/2022 - Done the Front End of the Feed
- 
- 18/09/2022 - Improving the Front End of the Feed and fixing bugs
- 
+
  19/09/2022 - Starting the Login screen, most of the front end of the Login screen ready
  
  <img height="500em" src="https://media.discordapp.net/attachments/955093666807054386/1021572015687208981/Android_Emulator_-_Pixel_4_API_30_5554_2022-09-19_20-49-11_video-converter.com.gif?width=273&height=579" />
@@ -38,6 +35,13 @@
  <li> Change to another screen </li>
  <li> Save the data </li>
  </ul>
+ 
+ 18/09/2022 - Improving the Front End of the Feed and fixing bugs
+
+ 17/09/2022 - Done the Front End of the Feed
+ 
+ 
+
  
  ## My Info
  <img height="30em" align="center"  src="https://media.discordapp.net/attachments/955093666807054386/1021046330078011432/discord-logo-4-1.png?width=533&height=533" /> - Discord - | Aguiar |#0965
