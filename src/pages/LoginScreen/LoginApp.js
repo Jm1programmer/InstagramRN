@@ -48,9 +48,8 @@ const styles = StyleSheet.create({
     },
 
     content: {
-     
-        height: height / 1.5,
-        justifyContent: 'center',
+    
+        justifyContent: 'flex-start'
        
         
     },

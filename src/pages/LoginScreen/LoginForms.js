@@ -1,5 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View,StatusBar,SafeAreaView, ScrollView, FlatList,Dimensions, Image, TextInput, TouchableOpacity } from 'react-native';
+
+import { useForm, Controller} from 'react-hook-form'
+import { yupResolver} from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 import FacebookLogo from '../../../assets/FacebookLogo.png'
 
@@ -7,35 +11,56 @@ import Icon from 'react-native-vector-icons/Feather';
 import Icons from 'react-native-vector-icons/Feather'
 
 export default function LoginForms() {
+   
+    const [ButtonForm, setButtonForm] = useState(false)
 
-    const  [usernameEmail, setUsernameEmail] = useState('');
-    const [Userpassword, setUserPassword] = useState('');
     const [HideText, sethideText] = useState(true);
-      
+    
+    const schema = yup.object({
+        UserNameEmail: yup.string().required(),
+        Password:  yup.string().min(6)
+        
+    })
+    
+
+    const { control, handleSubmit, formState: {errors}} = useForm({
+        resolver: yupResolver(schema)
+    })
+   
+    
   
-    function Login() {
-    const LoginData = {
-        usernameEmail,
-        Userpassword
-    }
-    console.log(LoginData)
+    function Login(data) {
+      
+        console.log(data);
+       
+    
 }
  
     return <>
         <View style={styles.InputView}>
-            <View style={styles.Input}>
+
+            
+<Controller control={control} name="UserNameEmail"
+            render={({ field: { onChange, onBlur, value}}) => (
+                <View style={styles.Input}>
                 <TextInput style={styles.InputText}
-                    onChangeText={setUsernameEmail}
-                    value={usernameEmail}
+                    onChangeText={onChange}
+                    onBlur={onBlur}
+                    value={value}
                     placeholder="Phone number, username or email"
                     selectionColor={'#909090'}
                 />
             </View>
-                
-            <View style={styles.Input}>
+             
+            )}/>
+
+            <Controller control={control} name="Password"
+            render={({ field: { onChange, onBlur, value}}) => (
+                <View style={styles.Input}>
                 <TextInput style={styles.InputText}
-                    onChangeText={setUserPassword}
-                    value={Userpassword}
+                    onChangeText={onChange}
+                    onBlur={onBlur}
+                    value={value}
                     placeholder="Password"
                     selectionColor={'#909090'}
                     secureTextEntry={HideText}
@@ -50,6 +75,13 @@ export default function LoginForms() {
              
                  </TouchableOpacity>
              </View>
+
+             
+            )}/>
+
+         
+                
+           
              
 
                 
@@ -60,14 +92,29 @@ export default function LoginForms() {
                     <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
                     </TouchableOpacity>
                 </View>
-        
+                    {
+
+                    }
+                     {( errors.UserNameEmail || errors.Password ) && <View style={styles.buttonView} onPress={handleSubmit(Login)}>
+                     <View style={styles.buttonInCorrect}>
+                         <Text style={styles.buttonText}>Log in</Text>
+                     </View>
+                     </View>
                      
-                
-                     <TouchableOpacity  style={styles.buttonView} onPress={Login}>
+                     }
+
+                     
+                    { (!errors.UserNameEmail && !errors.Password ) &&   <TouchableOpacity  style={styles.buttonView} onPress={handleSubmit(Login)}>
                      <View style={styles.buttonCorrect}>
                          <Text style={styles.buttonText}>Log in</Text>
                      </View>
                      </TouchableOpacity>
+
+                     }
+
+                  
+                     
+                    
                          
                       
                     
@@ -87,6 +134,14 @@ export default function LoginForms() {
                   </View>
                   </TouchableOpacity>
                   
+                  <View style={styles.LoginView}>
+                  <View style={styles.LoginBox}>
+                    <Text style={styles.DcountText}>Don't have an accont?</Text>
+                    <TouchableOpacity>
+                        <Text style={[styles.DcountText, styles.Sign]}>Sign Up</Text>
+                    </TouchableOpacity>
+                    </View>
+                  </View>
                 
         </>
         
@@ -156,7 +211,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },  
 
-    buttonFalse: {
+    buttonInCorrect: {
         width: '95%',
         height: height / 18,
         backgroundColor: '#57b7f26e',
@@ -211,5 +266,37 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#38A8F2',
     marginVertical: 10,
+   },
+
+   LoginView: {
+    position: 'absolute',
+    width: '100%',
+    height: height / 1.157,
+        
+        justifyContent: 'flex-end'
+   },
+   LoginBox: {
+  
+    borderWidth: 0.45,
+    borderColor:'#909090',
+  
+    alignSelf: 'flex-end',
+        width: '100%',
+        height: height / 10,
+       flexDirection: 'row',
+       alignItems: 'center',
+       justifyContent: 'center',
+   },
+
+   DcountText: {
+    fontFamily: 'SegoeUI',
+    fontSize: 15,
+    color: '#909090',
+   },
+
+   Sign: {
+    fontFamily: 'SegoeUIBold',
+    color: '#38A8F2',
+        marginHorizontal: 5,
    },
 });
